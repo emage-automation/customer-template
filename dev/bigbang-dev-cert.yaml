@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: common-bb
+  name: environment-bb
 stringData:
   # TLS key pair for *.bigbang.dev is used as an example for demo purposes
   values.yaml: |-

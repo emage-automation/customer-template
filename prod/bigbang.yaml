@@ -9,10 +9,10 @@ metadata:
   name: environment-repo
   namespace: bigbang
 spec:
-  interval: 1m
-  url: https://replace-with-your-git-repo.git
+  interval: 10m
+  url: https://github.com/emage-automation/customer-template.git
   ref:
-    branch: replace-with-your-branch
+    branch: template-demo
   secretRef:
     name: private-git
 ---
@@ -22,11 +22,11 @@ metadata:
   name: environment
   namespace: bigbang
 spec:
-  interval: 1m
+  interval: 10m
   sourceRef:
     kind: GitRepository
     name: environment-repo
-  path: ./dev
+  path: ./prod
   prune: true
   decryption:
     provider: sops
